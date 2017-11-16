@@ -40,13 +40,22 @@ cacheSolve <- function(x, ...) {
     inv
 }
 
+
+# ==========
+# Test Code
+# ==========
+
+# Standard matrix
 test_mat <- matrix(1:4, 2, 2)
 test_mat
+# Standard matrix inverse
 solve(test_mat)
 
+# Create special matrix
 special_mat <- makeCacheMatrix(matrix(1:4, 2, 2))
+special_mat
 special_mat$get()
 
-class(special_mat$get())
-
 cacheSolve(special_mat)
+
+special_mat$getinv()
